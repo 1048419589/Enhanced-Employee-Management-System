@@ -22,3 +22,11 @@ All modifications are limited to code standardization, logic fixes, and performa
 * Added data validation for input, preventing insertion of employee records with all fields empty.
 * Introduced Redis for caching; homepage statistics are now retrieved from Redis with priority.
 * Refactored Controller-layer logic and merged duplicated endpoints.
+
+<img width="2556" height="1346" alt="Image" src="https://github.com/user-attachments/assets/7a502658-b1a3-4440-bc1f-e4778c6d2a1f" />
+<img width="2559" height="1344" alt="Image" src="https://github.com/user-attachments/assets/c6e54fe0-201e-4241-b2fa-ddcf0b41647c" />
+<img width="2552" height="1339" alt="Image" src="https://github.com/user-attachments/assets/ef147d4c-487c-40f2-9c66-c05723457088" />
+<img width="2559" height="1345" alt="Image" src="https://github.com/user-attachments/assets/6f492929-bd9b-4765-8187-431bdc16f455" />
+<img width="2559" height="1341" alt="Image" src="https://github.com/user-attachments/assets/ec7cc3ab-a7c4-4d4c-86fa-54acaa4c7967" />
+<img width="2559" height="1345" alt="Image" src="https://github.com/user-attachments/assets/beef6647-c8c2-47ba-bf97-491e0bd6f999" />
+<img width="653" height="444" alt="Image" src="https://github.com/user-attachments/assets/c5731bac-cb59-495a-8308-01a3c882ecb7" />
