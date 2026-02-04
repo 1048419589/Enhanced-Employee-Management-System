@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Sidebar</title>
+</head>
+<body>
+<div id="sidebar" class='active' th:fragment="sidebar"><div class="sidebar-wrapper active">
+
+    <div class="sidebar-menu">
+        <ul class="menu">
+
+            <li class='sidebar-title'>人事管理系统</li>
+
+            <li class="sidebar-item active">
+                <a th:href="@{/}" class="sidebar-link color-secondary">
+                    <i data-feather="home" width="20" style="color: black"></i>
+                    <span>主页</span>
+                </a>
+            </li>
+
+            <li class="sidebar-item active">
+                <a th:href="@{/employee_register}" class='sidebar-link'>
+                    <i data-feather="layout" width="20" style="color: black"></i>
+                    <span>新增员工</span>
+                </a>
+            </li>
+
+            <li class="sidebar-item active">
+                <a th:href="@{/employee_details}" class='sidebar-link'>
+                    <i data-feather="layers" width="20" style="color: black"></i>
+                    <span>员工信息</span>
+                </a>
+            </li>
+
+            <li class="sidebar-item active">
+                <a th:href="@{/attendance}" class='sidebar-link'>
+                    <i data-feather="grid" width="20" style="color: black"></i>
+                    <span>出勤情况</span>
+                </a>
+            </li>
+
+            <li class="sidebar-item active">
+                <a th:href="@{/payroll}" class='sidebar-link'>
+                    <i data-feather="file-plus" width="20" style="color: black"></i>
+                    <span>薪资管理</span>
+                </a>
+            </li>
+
+            <li class="sidebar-item active">
+                <a th:href="@{/logout}" class='sidebar-link'>
+                    <i data-feather="log-out" width="20" style="color: black"></i>
+                    <span>退出登录</span>
+                </a>
+            </li>
+
+        </ul>
+    </div>
+    <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
+</div>
+</div>
+
+<script th:src="@{/js/feather.min.js}"></script>
+<script th:src="@{/js/perfect-scrollbar.min.js}"></script>
+<script th:src="@{/js/app.js}"></script>
+<script th:src="@{/js/main.js}"></script>
+
+<script>
+    // 简单的 JS 用来高亮当前选中的菜单
+    // 注意：有了 Thymeleaf，其实我们可以通过后端传参来控制 active，但这个 JS 方案也能用
+    const currentPageUrl = window.location.pathname;
+    const sidebarLinks = document.querySelectorAll(".sidebar-link");
+
+    sidebarLinks.forEach(link => {
+        // 获取链接的 path 部分，避免 http://localhost... 干扰
+        const linkPath = new URL(link.href).pathname;
+        if (linkPath === currentPageUrl) {
+            // 找到父级 li 元素添加 active 类，效果更好
+            link.closest('.sidebar-item').classList.add("active");
+        } else {
+            link.closest('.sidebar-item').classList.remove("active");
+        }
+    });
+</script>
+</body>
+</html>
