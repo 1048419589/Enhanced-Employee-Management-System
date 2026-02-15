@@ -23,6 +23,8 @@ All modifications are limited to code standardization, logic fixes, and performa
 * Introduced Redis for caching; homepage statistics are now retrieved from Redis with priority.
 * Refactored Controller-layer logic and merged duplicated endpoints.
 
+## Visualizations
+
 <img width="2556" height="1346" alt="Image" src="https://github.com/user-attachments/assets/7a502658-b1a3-4440-bc1f-e4778c6d2a1f" />
 <img width="2559" height="1344" alt="Image" src="https://github.com/user-attachments/assets/c6e54fe0-201e-4241-b2fa-ddcf0b41647c" />
 <img width="2552" height="1339" alt="Image" src="https://github.com/user-attachments/assets/ef147d4c-487c-40f2-9c66-c05723457088" />
